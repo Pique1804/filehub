@@ -14,7 +14,7 @@
 
 Если Android-приложение уже установлено, откройте **Настройки → Приложение → Проверить обновление**.
 
-На Debian 12 x86‑64 с systemd используйте эту команду, когда выпуск доступен без входа в GitHub.
+На Debian 12 x86‑64 с systemd выполните команду ниже. В минимальной установке сначала установите пакет `curl`.
 
 ```sh
 curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install.sh | bash
@@ -23,7 +23,7 @@ curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install
 Установщик сверит SHA-256 архива и напечатает приватную ссылку на мастер.
 Откройте её, чтобы создать аккаунт и выбрать папки.
 
-[Инструкция Linux и Proxmox](docs/installation.md) · [Установка из приватного выпуска](docs/installation.md#установка-одной-командой) · [Обновление сервера](docs/upgrading.md)
+[Инструкция Linux и Proxmox](docs/installation.md) · [Обновление сервера](docs/upgrading.md)
 
 ## Требования к серверу и клиентам
 

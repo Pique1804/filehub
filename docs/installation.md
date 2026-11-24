@@ -10,15 +10,7 @@
 
 ## Установка одной командой
 
-Пока репозиторий приватный, установите GitHub CLI и войдите через
-`gh auth login` под аккаунтом с доступом к FileHub. Запустите:
-
-```sh
-gh release download -R Pique1804/filehub -p install.sh -O - | bash
-```
-
-Когда репозиторий доступен без входа в GitHub, используйте ту же постоянную
-ссылку на скрипт через `curl`:
+Установите пакет `curl`, если его нет, и выполните команду.
 
 ```sh
 curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install.sh | bash

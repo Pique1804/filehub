@@ -7,7 +7,7 @@ setting up a large library.
 
 ## Install on Linux
 
-When the GitHub release is public, run:
+Install the `curl` package if it is missing, then run the public installer.
 
 ```sh
 curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install.sh | bash

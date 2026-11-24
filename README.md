@@ -15,7 +15,7 @@ space on your phone.
 
 Already have the Android app? Open **Settings → App → Check for updates**.
 
-On Debian 12 x86-64 with systemd, run this when the GitHub release is publicly available.
+On Debian 12 x86-64 with systemd, run the command below. On a minimal installation, install the `curl` package first.
 
 ```sh
 curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install.sh | bash
@@ -24,7 +24,7 @@ curl -fsSL https://github.com/Pique1804/filehub/releases/latest/download/install
 The installer checks the archive's SHA-256 and prints a private link to the
 setup wizard. Open it to create your account and choose your folders.
 
-[Linux and Proxmox guide](docs/installation.en.md) · [Install from a private release](docs/installation.en.md#install-on-linux) · [Upgrade an existing server](docs/upgrading.md)
+[Linux and Proxmox guide](docs/installation.en.md) · [Upgrade an existing server](docs/upgrading.md)
 
 ## System requirements
 
