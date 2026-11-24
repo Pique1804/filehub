@@ -1,0 +1,19 @@
+name: Feature request / Идея или предложение
+description: Suggest an improvement to FileHub / Предложить улучшение FileHub
+title: "[Idea] "
+labels: [enhancement]
+body:
+  - type: textarea
+    id: use_case
+    attributes:
+      label: What are you trying to do? / Что вы хотите сделать?
+      description: Describe your use case and what gets in the way. / Опишите задачу и что сейчас мешает.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: How should it work? / Как это должно работать?
+      description: Describe the result you would like to see. / Опишите желаемый результат.
+    validations:
+      required: true

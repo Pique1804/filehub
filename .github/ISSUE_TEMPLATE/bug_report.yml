@@ -1,6 +1,7 @@
 name: Bug report / Сообщение об ошибке
 description: Report a FileHub problem using sample files and accounts
 title: "[Bug] "
+labels: [bug]
 body:
   - type: markdown
     attributes:

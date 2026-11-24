@@ -1,0 +1,8 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Installation and FAQ / Установка и FAQ
+    url: https://github.com/Pique1804/filehub#install-filehub
+    about: Find setup instructions and answers to common questions. / Инструкция по настройке и ответы на частые вопросы.
+  - name: Report a vulnerability / Сообщить об уязвимости
+    url: https://github.com/Pique1804/filehub/security/advisories/new
+    about: Send a private security report to the maintainer. / Отправьте разработчику приватное сообщение об уязвимости.
