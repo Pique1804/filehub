@@ -1,0 +1,52 @@
+@font-face{font-family:'Golos Text';src:url('/fonts/golos.woff2') format('woff2');font-weight:400 900;font-display:swap}
+
+:root{
+  /* Shared Studio design system. */
+  --bg:#FAFAF8; --panel:#ffffff; --panel2:#F3F5F8; --row:#EDF0F4; --rowsel:#E8F1FF;
+  --text:#1B2030; --text2:#414853; --muted:#616B7B; --faint:#697487; --chev:#AAAEB4;
+  --accent:#006DE2; --accent-deep:#005ECB; --accent-soft:#DCEDFF; --accent-pill:#E8F1FF;
+  --green:#2EB45C; --green-deep:#1C8742; --green-soft:#D5F5DA;
+  --dark:#06090E; --toast:#1B222B; --border:#E1E5EA; --divider:#EEF0F3; --err:#C8321F;
+  --shadow:0 1px 2px rgba(15,25,50,.05);
+}
+:root[data-theme="dark"]{
+  --bg:#13151C; --panel:#1C1F29; --panel2:#1d212b; --row:#1d212b; --rowsel:#243049;
+  --text:#e6e9ef; --text2:#c2c8d4; --muted:#A5ADC0; --faint:#6b7488; --chev:#5a6274;
+  --accent:#2871DB; --accent-deep:#90BAFF; --accent-soft:#22304d; --accent-pill:#22304d;
+  --green:#3ecf6b; --green-deep:#6fe08f; --green-soft:#1a2b1f;
+  --dark:#06090E; --toast:#2b323d; --border:#2a2f3a; --divider:#22262f; --err:#ff6b6b;
+  --shadow:0 1px 2px rgba(0,0,0,.3);
+}
+*{box-sizing:border-box}
+html,body,#app{height:100%}
+body{margin:0;font:14px/1.5 'Golos Text',system-ui,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--text);overflow:hidden}
+a{color:var(--accent)}
+::-webkit-scrollbar{width:9px;height:9px}
+::-webkit-scrollbar-thumb{background:#c9ced6;border-radius:6px}
+:root[data-theme="dark"] ::-webkit-scrollbar-thumb{background:#333a46}
+::-webkit-scrollbar-track{background:transparent}
+
+:root{color-scheme:light} :root[data-theme="dark"]{color-scheme:dark}
+button,input,select,textarea{font:inherit} button,a,input,select{touch-action:manipulation} button{ -webkit-tap-highlight-color:transparent} :focus-visible{outline:3px solid var(--accent);outline-offset:3px} button:disabled{opacity:.5;cursor:default}
+#app select:not([multiple]):not([size]){
+  appearance:none;
+  padding-inline-end:32px;
+  background-image:linear-gradient(45deg,transparent 40%,var(--muted) 40% 60%,transparent 60%),
+    linear-gradient(135deg,transparent 40%,var(--muted) 40% 60%,transparent 60%);
+  background-position:right 17px center,right 11px center;
+  background-repeat:no-repeat;
+  background-size:6px 6px,6px 6px;
+  text-overflow:ellipsis;
+}
+@media(forced-colors:active){
+  #app select:not([multiple]):not([size]){appearance:auto;background-image:none}
+}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+.fh-gallery-video{width:100%;height:100%;display:flex;align-items:center;justify-content:center;background:#06090e}
+.fh-gallery-video video{width:100%;height:100%;object-fit:contain}
+.pswp__img:not(.pswp__img--placeholder){object-fit:contain}
+.pswp__fh-name{flex:1;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:#fff;font-size:13px;line-height:60px;padding:0 12px}
+.pswp__button--fh-download,.pswp__button--fh-share,.pswp__button--fh-album{width:auto!important;padding:0 12px!important;color:#fff!important;font-size:13px!important}
+.pswp__button--fh-trash{color:#fff}
+@media(max-width:700px){.pswp__fh-name{display:none}.pswp__button--fh-download,.pswp__button--fh-share,.pswp__button--fh-album{font-size:11px!important;padding:0 7px!important}}

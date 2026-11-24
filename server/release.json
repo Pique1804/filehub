@@ -1,0 +1,10 @@
+{
+  "version": "1.40.22",
+  "releaseDate": "2026-11-24",
+  "changes": [
+    "Revoke links to shared albums, with account and permission checks",
+    "Require HTTPS for the Android photo backup queue",
+    "Check and preserve the current catalogue during SQLite recovery",
+    "Plan and verify an upgrade from the official 1.40.20 and 1.40.21 Linux packages"
+  ]
+}

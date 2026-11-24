@@ -1,0 +1,24 @@
+{
+  "name": "filehub-frontend",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "test": "node --test tests/*.test.js"
+  },
+  "devDependencies": {
+    "@sveltejs/vite-plugin-svelte": "7.3.2",
+    "svelte": "5.59.1",
+    "vite": "8.3.8"
+  },
+  "dependencies": {
+    "@noble/hashes": "1.8.0",
+    "@tanstack/svelte-virtual": "3.13.52",
+    "@uppy/core": "6.3.1",
+    "@uppy/tus": "6.0.1",
+    "hls.js": "1.7.4",
+    "maplibre-gl": "6.18.0",
+    "photoswipe": "5.4.4"
+  }
+}

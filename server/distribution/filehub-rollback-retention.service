@@ -1,0 +1,19 @@
+[Unit]
+Description=Keep recent verified FileHub program rollback points
+After=filehub.service
+ConditionPathIsDirectory=/var/lib/filehub-upgrades
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 /usr/local/sbin/filehub-rollback-retention apply
+UMask=0077
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=/var/lib/filehub-upgrades
+NoNewPrivileges=yes
+RestrictAddressFamilies=AF_UNIX
+Nice=10
+IOSchedulingClass=idle
+MemoryMax=128M
+CPUQuota=50%

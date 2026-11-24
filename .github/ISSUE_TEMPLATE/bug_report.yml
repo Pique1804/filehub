@@ -1,0 +1,49 @@
+name: Bug report / Сообщение об ошибке
+description: Report a FileHub problem using sample files and accounts
+title: "[Bug] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        For security problems, follow [SECURITY.md](https://github.com/Pique1804/filehub/blob/main/SECURITY.md).
+        Use sample data and redact passwords, setup codes, private addresses and personal files.
+        Можно заполнить на русском языке. Для примеров используйте тестовые файлы и аккаунты.
+  - type: input
+    id: server_version
+    attributes:
+      label: FileHub server version / Версия сервера
+      placeholder: "1.40.21, installer revision 1"
+    validations:
+      required: true
+  - type: dropdown
+    id: installation
+    attributes:
+      label: Installation / Способ установки
+      options:
+        - Linux package
+        - Proxmox LXC
+        - Docker Compose
+        - Built from source
+        - Other or unknown
+    validations:
+      required: true
+  - type: input
+    id: client
+    attributes:
+      label: Client and version / Клиент и версия
+      description: Browser and OS, FileHub Android version, or WebDAV client
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps / Шаги
+      description: What did you do? Include the smallest relevant example.
+    validations:
+      required: true
+  - type: textarea
+    id: observed
+    attributes:
+      label: Expected and actual result / Ожидаемый и фактический результат
+    validations:
+      required: true

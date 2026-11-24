@@ -1,0 +1,34 @@
+[Unit]
+Description=FileHub file server
+After=network.target
+RequiresMountsFor=/opt/filehub /var/lib/filehub
+
+[Service]
+User=filehub
+Group=filehub
+Environment=PORT=8080
+Environment=HOME=/var/lib/filehub
+Environment=FILEHUB_SOURCES=HDD1:/mnt/data,HDD2:/mnt/hdd2
+Environment=FILEHUB_DB=/var/lib/filehub/index.db
+Environment=FILEHUB_SECRET_FILE=/var/lib/filehub/secret
+Environment=FILEHUB_THUMB_DIR=/var/lib/filehub/thumbs
+Environment=FILEHUB_PREVIEW_DIR=/var/lib/filehub/previews
+Environment=FILEHUB_TUS_DIR=/mnt/hdd2/.filehub-tus
+EnvironmentFile=/etc/filehub.env
+StateDirectory=filehub
+StateDirectoryMode=0750
+WorkingDirectory=/var/lib/filehub
+ExecStart=/opt/filehub/filehub
+Restart=on-failure
+NoNewPrivileges=yes
+PrivateTmp=yes
+ProtectHome=yes
+ProtectSystem=strict
+ReadWritePaths=-/mnt/data -/mnt/hdd2
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictSUIDSGID=yes
+
+[Install]
+WantedBy=multi-user.target

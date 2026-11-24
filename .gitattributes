@@ -1,0 +1,8 @@
+# Keep build-input hashes identical on Linux and Windows.
+* text=auto eol=lf
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.webp binary
+*.woff2 binary
+*.gif binary

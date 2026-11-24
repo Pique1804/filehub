@@ -1,0 +1,29 @@
+[Unit]
+Description=Filehub host storage mounting service
+After=local-fs.target
+
+[Service]
+Type=simple
+User=root
+Group=filehub
+UMask=0077
+RuntimeDirectory=filehub-storage
+RuntimeDirectoryMode=0750
+StateDirectory=filehub-storage
+StateDirectoryMode=0700
+ExecStart=/usr/bin/python3 /opt/filehub-storage/service.py
+NoNewPrivileges=true
+CapabilityBoundingSet=CAP_SYS_ADMIN CAP_DAC_OVERRIDE CAP_CHOWN CAP_FOWNER
+RestrictAddressFamilies=AF_UNIX
+RestrictSUIDSGID=true
+MemoryMax=96M
+MemorySwapMax=0
+CPUQuota=25%
+TasksMax=8
+Restart=on-failure
+RestartSec=10s
+# Do not add mount namespace sandboxing (PrivateMounts, PrivateTmp, Protect*, etc.):
+# the service must create mounts visible in the host mount namespace.
+
+[Install]
+WantedBy=multi-user.target

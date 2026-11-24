@@ -1,0 +1,5 @@
+# Install torch matching your CUDA first, e.g.:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu121
+open_clip_torch
+pillow
+requests

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="{{if .Russian}}ru{{else}}en{{end}}">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <title>{{if .Russian}}Отправить файл — FileHub{{else}}Send a file — FileHub{{end}}</title>
+  <link rel="stylesheet" href="/upload-share.css">
+  <script src="/upload-share.js" defer></script>
+</head>
+<body>
+  <main>
+    <p class="app-name">FileHub</p>
+    <h1>{{if .Russian}}Отправить файл{{else}}Send a file{{end}}</h1>
+    <p>{{if .Russian}}Размер одного файла — до {{.MaxMiB}} МиБ.{{else}}Maximum file size is {{.MaxMiB}} MiB.{{end}}</p>
+    <form data-max-bytes="{{.MaxBytes}}">
+      <label for="receive-file">{{if .Russian}}Выберите файл{{else}}Choose a file{{end}}</label>
+      <input id="receive-file" type="file" required>
+      <div class="actions">
+        <button type="submit">{{if .Russian}}Отправить{{else}}Send{{end}}</button>
+        <button class="cancel" type="button" hidden>{{if .Russian}}Отменить{{else}}Cancel{{end}}</button>
+      </div>
+      <progress aria-label="{{if .Russian}}Ход передачи{{else}}Upload progress{{end}}" max="100" hidden></progress>
+      <p role="status" aria-live="polite"></p>
+      <noscript>{{if .Russian}}Включите JavaScript, чтобы отправить файл.{{else}}Enable JavaScript to send a file.{{end}}</noscript>
+    </form>
+  </main>
+</body>
+</html>

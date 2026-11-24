@@ -1,0 +1,43 @@
+# Dependencies and generated artifacts
+**/node_modules/
+**/build/
+**/.gradle/
+**/.kotlin/
+**/__pycache__/
+*.pyc
+/releases/
+/.build/
+/dist/
+
+# Runtime configuration, databases and personal files
+.env
+.env.*
+!.env.example
+**/local.properties
+**/signing.properties
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.sqlite3
+*.sqlite-*
+**/state/
+**/storage/
+**/data/
+**/secret
+*.log
+/AGENTS.md
+
+# Private signing material and packaged applications
+*.key
+*.pem
+*.keystore
+*.jks
+*.p12
+*.apk
+*.aab
+
+# Editor and operating-system files
+.DS_Store
+.idea/
+.vscode/
